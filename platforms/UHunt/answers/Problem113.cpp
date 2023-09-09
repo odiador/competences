@@ -1,10 +1,10 @@
-#include<iostream>
+#include<cstdio>
 #include<cmath>
 
-using namespace std;
 
 int main() {
     double n, p;
-    while (cin >> n >> p)
-        cout << pow(p, 1 / n) << endl;
+    while (scanf("%lf %lf", &n, &p) != -1)
+        printf("%.0lf\n", pow(p, 1 / n));
+    return 0;
 }

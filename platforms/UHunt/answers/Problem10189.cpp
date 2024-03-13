@@ -1,9 +1,7 @@
 #include <iostream>
-#include <cctype>
 
 using namespace std;
 
-// NOT SOLVED
 int main() {
     int m, n, index = 1;
     while (cin >> n >> m && (m != 0 || n != 0)) {
@@ -37,13 +35,14 @@ int main() {
                 arrcopy[i][j] = (char) count;
             }
         }
-        cout << endl << "Field #" << index << ":" << endl;
+        cout << "Field #" << index << ":" << endl;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 cout << arrcopy[i][j];
             }
             cout << endl;
         }
+        cout << endl;
         index++;
     }
     return 0;

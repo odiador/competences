@@ -22,9 +22,15 @@ for i in range (n):
     
     while maxConsecutive > 0:
         cnt = 0
+        maxCnt = 0
         for cons in consecutive:
             if cons >= maxConsecutive:
                 cnt+=1
-        maxValue = max(maxValue, cnt*maxConsecutive)
+            else:
+                maxCnt = max(maxCnt, cnt)
+                cnt=0
+        maxCnt = max(maxCnt, cnt)
+        maxValue = max(maxValue, maxCnt*maxConsecutive)
         maxConsecutive-=1
+
 print(maxValue)
